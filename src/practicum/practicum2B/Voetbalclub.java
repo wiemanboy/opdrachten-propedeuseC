@@ -4,8 +4,12 @@ public class Voetbalclub {
     int aantalGewonnen = 0;
     int aantalGelijk = 0;
     int aantalVerloren = 0;
+    public String naam = "";
 
-    Voetbalclub(String naam){}
+    public Voetbalclub(String naam){
+        this.naam = naam;
+    }
+
 
     public void verwerkResultaat(char ch) {
         if (ch == 'w')
@@ -23,6 +27,10 @@ public class Voetbalclub {
 
     public int aantalGespeeld(){
         return aantalGewonnen + aantalGelijk + aantalVerloren;
+    }
+
+    public String toString(){
+        return naam + "\t" + aantalGespeeld() + " " + aantalGewonnen + " " + aantalGelijk + " " + aantalVerloren + " " + aantalPunten();
     }
 
 }
