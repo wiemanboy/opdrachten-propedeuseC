@@ -4,7 +4,7 @@ public class Voetbalclub {
     int aantalGewonnen = 0;
     int aantalGelijk = 0;
     int aantalVerloren = 0;
-    public String naam = "";
+    String naam = "";
 
     public Voetbalclub(String naam){
         this.naam = naam;
