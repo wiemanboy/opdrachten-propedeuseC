@@ -5,7 +5,7 @@ public class Cirkel {
     private int xPositie;
     private int yPositie;
 
-    public Cirkel(int rad, int x, int y){
+    public Cirkel(int rad, int x, int y) throws IllegalArgumentException {
         radius = rad;
         xPositie = x;
         yPositie = y;
