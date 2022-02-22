@@ -4,7 +4,7 @@ public class Klant {
     private String naam;
     private double kortingsPercentage;
 
-    public void klant(String nm){
+    public Klant(String nm){
         naam = nm;
     }
 
@@ -13,7 +13,7 @@ public class Klant {
     }
 
     public double getKorting(){
-        return 1.0;
+        return kortingsPercentage;
     }
 
     public String toString(){

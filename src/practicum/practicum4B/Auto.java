@@ -4,15 +4,17 @@ public class Auto {
     private String type;
     private double prijsPerDag;
 
-    public void Auto(String tp, double prPd){
+    public Auto(String tp, double prPd){
         type = tp;
         prijsPerDag = prPd;
     }
 
-    public void setPrijsPerDag(double prDp){}
+    public void setPrijsPerDag(double prDp){
+        prijsPerDag = prDp;
+    }
 
     public double getPrijsPerDag(){
-        return 1.0;
+        return prijsPerDag;
     }
 
     public String toString(){

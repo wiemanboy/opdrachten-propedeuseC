@@ -1,29 +1,44 @@
 package practicum.practicum4B;
 
 public class AutoHuur {
+    private int aantalDagen;
+    private Auto gehuurdeAuto;
+    private Klant huurder;
 
-    public void AutoHuur(){}
+    public AutoHuur(){}
 
-    public void setAantalDagen(int aD){}
-
-    public int getAantalDagen(){
-        return 1;
+    public void setAantalDagen(int aD){
+        aantalDagen = aD;
     }
 
-    public void setGehuurdeAuto(Auto gA){}
+    public int getAantalDagen(){
+        return aantalDagen;
+    }
 
-    //public Auto getGehuurdeAuto(){}
+    public void setGehuurdeAuto(Auto gA){
+        gehuurdeAuto = gA;
+    }
 
-    public void setHuurder(Klant k){}
+    public Auto getGehuurdeAuto(){
+        return gehuurdeAuto;
+    }
 
-    //public Klant getHuurder(){}
+    public void setHuurder(Klant k){
+        huurder = k;
+    }
+
+    public Klant getHuurder(){
+        return huurder;
+    }
 
     public double totaalPrijs(){
         return 1.0;
     }
 
     public String toString(){
-        return"kaas";
+        String s = "autotype: " + gehuurdeAuto;
+
+        return s;
     }
 
 
