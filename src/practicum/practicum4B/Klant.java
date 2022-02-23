@@ -17,7 +17,7 @@ public class Klant {
     }
 
     public String toString(){
-        return "kaas";
+        return naam + " (korting: " + kortingsPercentage + "%)";
     }
 
 

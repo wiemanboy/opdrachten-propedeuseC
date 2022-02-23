@@ -5,6 +5,7 @@ public class AutoHuur {
     private Auto gehuurdeAuto;
     private Klant huurder;
 
+
     public AutoHuur(){}
 
     public void setAantalDagen(int aD){
@@ -36,7 +37,7 @@ public class AutoHuur {
     }
 
     public String toString(){
-        String s = "autotype: " + gehuurdeAuto;
+        String s = "Autotype: " + gehuurdeAuto + "\nHuurder: " + huurder + "\naantal dagen: " + aantalDagen + " en dat kost: " + totaalPrijs();
 
         return s;
     }
