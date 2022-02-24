@@ -6,7 +6,12 @@ public class Auto {
 
     public Auto(String tp, double prPd){
         type = tp;
+        if (prPd < 0){
+            prijsPerDag = 0;
+        }
+        else{
         prijsPerDag = prPd;
+        }
     }
 
     public void setPrijsPerDag(double prDp){

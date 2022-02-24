@@ -9,7 +9,18 @@ public class Klant {
     }
 
     public void setKorting(double kP){
-        kortingsPercentage = kP;
+        if (kP < 0){
+        kortingsPercentage = 0;
+        }
+        else{
+            if (kP > 100){
+                kortingsPercentage = 100;
+            }
+            else{
+                kortingsPercentage = kP;
+            }
+            }
+
     }
 
     public double getKorting(){

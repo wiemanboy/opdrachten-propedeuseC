@@ -9,7 +9,12 @@ public class AutoHuur {
     public AutoHuur(){}
 
     public void setAantalDagen(int aD){
+        if (aD < 0){
+            aantalDagen = 0;
+        }
+        else{
         aantalDagen = aD;
+        }
     }
 
     public int getAantalDagen(){
@@ -46,6 +51,9 @@ public class AutoHuur {
         }
         else {
             korting = huurder.getKorting();
+        }
+        if (korting < 0){
+            korting = 0;
         }
         double krtng = korting /100;
         double tot = aantalDagen * ppd;
