@@ -34,6 +34,17 @@ class AutoHuurTest {
         assertEquals("Autotype: auto met prijs per dag: 10.0\n" + "Huurder: Pietje (korting: 25.0%)\n" + "aantal dagen: 20 en dat kost: 150.0",ah1.toString());
     }
 
+    @Test
+    void geenAuto(){
+        ah1.setHuurder(k1);
+        assertEquals("er is geen auto bekend\n" + "Huurder: Pietje (korting: 0.0%)\n" + "aantal dagen: 0 en dat kost: 0.0",ah1.toString());
+    }
+
+    @Test
+    void geenHuurder(){
+        ah1.setGehuurdeAuto(a1);
+        assertEquals("Autotype: auto met prijs per dag: 10.0\n" + "er is geen huurder bekend\n" + "aantal dagen: 0 en dat kost: 0.0",ah1.toString());
+    }
 
     @Test
     void negatieveKorting(){
@@ -58,7 +69,5 @@ class AutoHuurTest {
         k1.setKorting(110);
         assertEquals("Pietje (korting: 100.0%)",k1.toString());
     }
-
-
 
 }
