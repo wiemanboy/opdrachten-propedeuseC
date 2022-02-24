@@ -33,12 +33,44 @@ public class AutoHuur {
     }
 
     public double totaalPrijs(){
-        return 1.0;
+        double ppd;
+        double korting;
+        if (gehuurdeAuto == null){
+            ppd = 0;
+        }
+        else {
+            ppd = gehuurdeAuto.getPrijsPerDag();
+        }
+        if (huurder == null){
+            korting = 0;
+        }
+        else {
+            korting = huurder.getKorting();
+        }
+        double krtng = korting /100;
+        double tot = aantalDagen * ppd;
+        double prs = tot - (tot * krtng);
+        return prs;
     }
 
     public String toString(){
-        String s = "Autotype: " + gehuurdeAuto + "\nHuurder: " + huurder + "\naantal dagen: " + aantalDagen + " en dat kost: " + totaalPrijs();
-
+        String at;
+        String h;
+        String k;
+        if (gehuurdeAuto == null){
+            at = "er is geen auto bekend\n";
+        }
+        else {
+            at = "Autotype: " + gehuurdeAuto + "\n";
+        }
+        if (huurder == null){
+            h = "er is geen huurder bekend\n";
+        }
+        else {
+            h = "Huurder: " + huurder + "\n";
+        }
+        k = "aantal dagen: " + aantalDagen + " en dat kost: " + totaalPrijs();
+        String s = at + h + k;
         return s;
     }
 
