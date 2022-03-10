@@ -41,6 +41,12 @@ public class Persoon {
         }
     }
 
+    public ArrayList<Game> bepaalGamesNietInBezit(ArrayList<Game> tK) {
+        for (Game heeftgame : mijnGames)
+            tK.remove(heeftgame);
+        return tK;
+    }
+
     public String toString() {
         String s = naam + " heeft een budget van €" + String.format(Locale.GERMANY,"%.2f",budget) + " en bezit de volgende games:";
         for (Game games : mijnGames){
@@ -48,4 +54,5 @@ public class Persoon {
         }
         return s;
     }
+
 }
