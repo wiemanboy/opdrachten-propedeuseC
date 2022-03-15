@@ -29,11 +29,9 @@ public class Persoon {
     }
 
     public boolean verkoop(Game g, Persoon koper){
-        if (g.huidigeWaarde() < koper.budget && !koper.mijnGames.contains(g) && mijnGames.contains(g)) {
-            koper.budget -= g.huidigeWaarde();
+        if (mijnGames.contains(g) && koper.koop(g) ) {
             budget += g.huidigeWaarde();
             mijnGames.remove(g);
-            koper.mijnGames.add(g);
             return true;
         }
         else {
