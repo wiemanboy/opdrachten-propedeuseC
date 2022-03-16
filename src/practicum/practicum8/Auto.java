@@ -17,9 +17,9 @@ public class Auto {
         boolean gelijkeObjecten = false;
 
         if (andereObject instanceof Auto) {
-            Auto andereGame = (Auto) andereObject;
+            Auto anderauto = (Auto) andereObject;
 
-            if (true == true){
+            if (this.kenteken.equals(anderauto.kenteken) ){
                 gelijkeObjecten = true;
             }
         }
