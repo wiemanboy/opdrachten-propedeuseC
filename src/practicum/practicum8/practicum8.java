@@ -14,7 +14,7 @@ public class practicum8 {
         Goed f1 = new Fiets("mountainbike",1000,2019,123456);
         Goed f2 = new Fiets("mountainbike",1000,2019,123456);
         Goed f3 = new Fiets("gazelle",600,2017,123457);
-        Goed f4 = new Fiets("fiets can 9 karaat goud",7000000,2024,9016);
+        Goed f4 = new Fiets("fiets can 12 karaat goud",47000000,2024,9016);
 
         bI1.schafAan(a1);
         bI1.schafAan(a2);
