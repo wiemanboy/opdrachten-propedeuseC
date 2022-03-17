@@ -1,25 +1,25 @@
 package practicum.practicum8;
 
-import practicum.practicum6A.Game;
-
-public class Auto {
+public class Auto extends Voertuig{
     private String kenteken;
 
     public Auto(String tp, double pr, int jr, String kt){
+        super(tp,pr,jr);
         kenteken = kt;
     }
 
-    public double huidigeWaarde(){
-        return 0.0;
+    @Override
+    public double huidigewaarde() {
+        return nieuwprijs * Math.pow(0.7,2022 - bouwjaar);
     }
 
     public boolean equals(Object andereObject) {
         boolean gelijkeObjecten = false;
 
         if (andereObject instanceof Auto) {
-            Auto anderauto = (Auto) andereObject;
+            Auto andereAuto = (Auto) andereObject;
 
-            if (this.kenteken.equals(anderauto.kenteken) ){
+            if (super.equals(andereAuto) && kenteken.equals(andereAuto.kenteken) ){
                 gelijkeObjecten = true;
             }
         }

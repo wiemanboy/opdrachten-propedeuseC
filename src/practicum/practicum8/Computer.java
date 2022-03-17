@@ -1,5 +1,8 @@
 package practicum.practicum8;
 
+import java.lang.Math;
+import java.util.Locale;
+
 public class Computer implements Goed{
 
     private String type;
@@ -12,10 +15,13 @@ public class Computer implements Goed{
         macAdres = adr;
         aanschafPrijs = pr;
         productieJaar = jr;
+        if (productieJaar > 2022){
+            productieJaar = 2022;
+        }
     }
 
     public double huidigewaarde(){
-        return 0.0;
+        return aanschafPrijs * Math.pow(0.6,2022 - productieJaar);
     }
 
     public boolean equals(Object andereObject) {
@@ -34,5 +40,8 @@ public class Computer implements Goed{
         return gelijkeObjecten;
     }
 
-
+    @Override
+    public String toString() {
+        return "Computer type : " + type + " met macadres : " + aanschafPrijs + " gemaakt in productiejaar : " + productieJaar + " heeft een huidige waarde van " + String.format(Locale.GERMANY,"%.2f",huidigewaarde()) + "\n";
+    }
 }

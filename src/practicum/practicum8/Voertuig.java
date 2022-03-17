@@ -1,5 +1,7 @@
 package practicum.practicum8;
 
+import java.util.Locale;
+
 public abstract class Voertuig implements Goed {
     private String type;
     protected double nieuwprijs;
@@ -9,6 +11,9 @@ public abstract class Voertuig implements Goed {
         type = tp;
         nieuwprijs = pr;
         bouwjaar = jr;
+        if (bouwjaar > 2022){
+            bouwjaar = 2022;
+        }
     }
 
     public boolean equals(Object andereObject) {
@@ -24,5 +29,10 @@ public abstract class Voertuig implements Goed {
             }
         }
         return gelijkeObjecten;
+    }
+
+    @Override
+    public String toString() {
+        return "voertuig type : " + type + " met bouwjaar : " + bouwjaar + " heeft nu een waarde van  " + String.format(Locale.GERMANY,"%.2f",huidigewaarde()) + "\n";
     }
 }
