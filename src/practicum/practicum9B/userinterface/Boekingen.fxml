@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="practicum.practicum9B.userinterface.BoekingenController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practicum.practicum9B.userinterface.BoekingenController">
+   <children>
+      <TextField fx:id="naamVeld" layoutX="218.0" layoutY="76.0" prefHeight="26.0" prefWidth="270.0" />
+      <TextField fx:id="adresVeld" layoutX="218.0" layoutY="120.0" prefHeight="26.0" prefWidth="270.0" />
+      <DatePicker fx:id="aankomstDatumVeld" layoutX="218.0" layoutY="167.0" prefHeight="26.0" prefWidth="270.0" />
+      <DatePicker fx:id="vertrekDatumVeld" layoutX="217.0" layoutY="220.0" prefHeight="26.0" prefWidth="270.0" />
+      <Label layoutX="95.0" layoutY="80.0" text="Naam:" />
+      <Label layoutX="95.0" layoutY="124.0" text="Adres:" />
+      <Label layoutX="95.0" layoutY="171.0" text="Aankomstdatum:" />
+      <Label layoutX="95.0" layoutY="224.0" text="Vertrekdatum:" />
+      <Label layoutX="95.0" layoutY="277.0" text="Kamertype" />
+      <Label layoutX="67.0" layoutY="36.0" text="Voer uw gegevens in" />
+      <Button layoutX="488.0" layoutY="335.0" mnemonicParsing="false" onAction="#boek" text="Boek" />
+      <Button layoutX="424.0" layoutY="335.0" mnemonicParsing="false" onAction="#reset" text="Reset" />
+      <ComboBox fx:id="kamertypeBox" layoutX="219.0" layoutY="273.0" prefHeight="26.0" prefWidth="270.0" />
+   </children>
 </AnchorPane>
