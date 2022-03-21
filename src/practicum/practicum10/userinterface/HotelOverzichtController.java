@@ -4,11 +4,16 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.stage.Stage;
 import practicum.practicum10.model.Hotel;
 
+import java.io.IOException;
 import java.time.LocalDate;
 
 public class HotelOverzichtController {
@@ -35,13 +40,21 @@ public class HotelOverzichtController {
     }
 
     public void nieuweBoeking(ActionEvent actionEvent) {
-        System.out.println("nieuweBoeking() is nog niet geïmplementeerd!");
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(getClass().getResource("Boekingen.fxml"));
 
-        // Maak in je project een nieuwe FXML-pagina om boekingen te kunnen invoeren
-        // Open de nieuwe pagina in deze methode
-        // Zorg dat de gebruiker ondertussen geen gebruik kan maken van de HotelOverzicht-pagina
-        // Update na sluiten van de nieuwe pagina het boekingen-overzicht
+            Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+            Stage stage = new Stage();
+
+            stage.setTitle("New Window");
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            System.out.println("kaas");
+        }
     }
+
 
     public void toonBoekingen() {
         System.out.println("toonBoekingen() is nog niet geïmplementeerd!");
