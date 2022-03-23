@@ -42,6 +42,7 @@ public class HotelApp extends Application {
 
         stage.setTitle("HotelApp");
         stage.setScene(new Scene(root));
+        stage.setResizable(false);
         stage.show();
     }
 }

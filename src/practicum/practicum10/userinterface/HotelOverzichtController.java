@@ -52,6 +52,7 @@ public class HotelOverzichtController {
                 newStage.setScene(new Scene(root));
                 newStage.initModality(Modality.APPLICATION_MODAL);
                 newStage.showAndWait();
+                newStage.setResizable(false);
                 initialize();
 
         } catch (IOException e) {
@@ -71,7 +72,7 @@ public class HotelOverzichtController {
 
             if ((pickedDate.isAfter(aankomst) && pickedDate.isBefore(vertrek)) || (pickedDate.equals(aankomst)) || pickedDate.equals(vertrek)){
 
-                String s = aankomst + " " + vertrek + " " + boeking.getKamer() + " " + boeking.getBoeker().getNaam();
+                String s = aankomst + "\t" + vertrek + "\t" + boeking.getKamer() + "\t\t" + boeking.getBoeker().getNaam();
                 boekingen.add(s);
             }
         }
