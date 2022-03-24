@@ -29,11 +29,6 @@ public class practicum11 {
         try {
             Path path = Path.of("src/practicum/practicum11/" + bronBestandsnaam);
             alleRegels = Files.readAllLines(path);
-        }
-        catch (Exception e){
-            System.out.println("De ingevulde naam van het bronbestand is ongeldig.");
-        }
-
         for (String product : alleRegels){
             List<String> lst = Arrays.asList(product.split(" : "));
             double berekendeWaarde = 0.0;
@@ -47,6 +42,11 @@ public class practicum11 {
             s+= lst.get(0) + String.format(Locale.GERMANY,"%.2f",berekendeWaarde) + "\n";
 
         }
+        }
+        catch (Exception e){
+            System.out.println("De ingevulde naam van het bronbestand is ongeldig.");
+        }
+
         try {
             Path newpath = Path.of("src/practicum/practicum11/" + bestemmingsBestandsnaam);
             BufferedWriter out = Files.newBufferedWriter(newpath);
